@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/tvClientNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Client Number"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/edClientNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="6"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvClientNumber"
+        app:layout_constraintLeft_toRightOf="@id/tvClientNumber"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:id="@+id/tvClientName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Client Name"
+        app:layout_constraintStart_toStartOf="@id/tvClientNumber"
+        app:layout_constraintTop_toBottomOf="@id/tvClientNumber"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/edClientName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="6"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@id/edClientNumber"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvClientName"
+        app:layout_constraintLeft_toRightOf="@id/tvClientName"
+        />
+
+    <TextView
+        android:id="@+id/tvPizza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pizza type"
+        app:layout_constraintStart_toStartOf="@id/tvClientNumber"
+        app:layout_constraintTop_toBottomOf="@id/tvClientName"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        />
+
+    <RadioGroup
+        android:id="@+id/rgPizza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/edClientNumber"
+        app:layout_constraintTop_toTopOf="@id/tvPizza"
+        >
+
+        <RadioButton
+            android:id="@+id/rbCheese"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cheese" />
+
+        <RadioButton
+            android:id="@+id/rbVegetarian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vegetarian" />
+
+        <RadioButton
+            android:id="@+id/rbMexican"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mexican" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvNbSlices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nb Slices"
+        app:layout_constraintStart_toStartOf="@id/tvClientNumber"
+        app:layout_constraintTop_toBottomOf="@id/rgPizza"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/edNbSlices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="6"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBaseline_toBaselineOf="@id/tvNbSlices"
+        app:layout_constraintStart_toStartOf="@id/edClientNumber"
+        />
+
+    <TextView
+        android:id="@+id/tvAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount"
+        app:layout_constraintStart_toStartOf="@id/tvClientNumber"
+        app:layout_constraintTop_toBottomOf="@id/tvNbSlices"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/tvAmountResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="....."
+        app:layout_constraintBaseline_toBaselineOf="@id/tvAmount"
+        app:layout_constraintStart_toStartOf="@id/edNbSlices"
+        android:textSize="20sp"
+        />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/button_selector"
+
+        />
+
+    <Button
+        android:id="@+id/btnShowAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show All"
+        app:layout_constraintBaseline_toBaselineOf="@id/btnSave"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/button_selector"
+        />
+
+
+
+    <Button
+        android:id="@+id/btnQuit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quit"
+        app:layout_constraintBaseline_toBaselineOf="@id/btnSave"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/button_selector"
+        android:layout_marginRight="20dp"
+        />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        app:layout_constraintBottom_toTopOf="@id/btnShowAll"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_selector"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
